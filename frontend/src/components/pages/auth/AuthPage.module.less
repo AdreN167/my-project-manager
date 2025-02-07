@@ -1,0 +1,47 @@
+.auth {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    max-width: 452px;
+  }
+
+  &__nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &__nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    max-width: 226px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    list-style: none;
+    cursor: pointer;
+
+    &--active {
+      background-color: white;
+      transition: background-color 0.2s;
+    }
+  }
+
+  &__outlet {
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 104px 54px 48px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+  }
+}

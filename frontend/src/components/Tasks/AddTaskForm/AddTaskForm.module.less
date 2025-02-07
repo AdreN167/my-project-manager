@@ -1,0 +1,60 @@
+.form {
+  width: 100%;
+  max-width: 452px;
+  min-height: 552px;
+  background-color: @white;
+  border-radius: 25px;
+
+  &__wrapper {
+    box-sizing: border-box;
+    position: relative;
+    padding: 53px 40px;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__close {
+    position: absolute;
+    top: -29px;
+    right: -29px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 43px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__input {
+    flex: 1;
+    margin-bottom: 32px;
+  }
+
+  &__textarea {
+    margin-bottom: 42px;
+  }
+
+  &__submit {
+    width: 100%;
+    align-self: center;
+  }
+
+  &__label {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  &__datepicker-container {
+    flex: 1;
+    margin-bottom: 32px;
+  }
+
+  &__datepicker {
+    width: 100%;
+  }
+}

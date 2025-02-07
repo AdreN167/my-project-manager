@@ -1,0 +1,81 @@
+.check {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 24px;
+  color: @black;
+  cursor: pointer;
+
+  &--pt0 {
+    padding-top: 0;
+  }
+
+  &__input {
+    .is-hidden();
+
+    &:checked {
+      & ~ .check__mark {
+        // вот эта мешанина в начале означает "следующий элемент"
+        background-color: @purple;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 7px;
+          top: 2px;
+          width: 6px;
+          height: 12px;
+          border-bottom: 2px solid @white;
+          border-right: 2px solid @white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &__mark {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid @purple;
+  }
+
+  &__label {
+    margin-left: 39px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    &--s {
+      font-size: 18px;
+      line-height: 19px;
+    }
+  }
+
+  &--red {
+    color: @red;
+    .check__mark {
+      border-color: @red;
+    }
+    .check__input {
+      &:checked {
+        & ~ .check__mark {
+          background-color: @red;
+        }
+      }
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

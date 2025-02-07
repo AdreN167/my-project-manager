@@ -1,0 +1,25 @@
+.progress-bar {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid @black;
+  transition: 0.5s;
+
+  &__percentage {
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+
+  &__text {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid @black;
+    border-radius: 50%;
+    background-color: @white;
+    transition: 0.5s;
+  }
+}

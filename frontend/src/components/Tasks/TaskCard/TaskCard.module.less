@@ -1,0 +1,55 @@
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 20px;
+  border: 3px solid @purple;
+
+  &__label {
+    margin-right: 30px;
+  }
+
+  &__delete-btn {
+    display: block;
+    margin-left: 33px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: @black;
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  &__settings {
+    margin-left: auto;
+    color: #9b9b9b;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: #8860d0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__datepicker-container {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    margin-left: 40px;
+    max-width: 145px;
+    min-width: 145px;
+    max-height: 33px;
+    background-color: @light-green;
+
+    &--dead {
+      background-color: @light-red;
+    }
+  }
+
+  &__datepicker {
+    input {
+      padding: 5px 0 5px 10px;
+    }
+  }
+}

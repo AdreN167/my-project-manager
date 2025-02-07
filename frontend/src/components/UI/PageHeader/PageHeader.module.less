@@ -1,0 +1,43 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  min-height: 127px;
+  background-color: @light-purple;
+  z-index: 10;
+
+  &__container {
+    .container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 127px;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: 125px;
+    height: 75px;
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__out {
+    padding: 0;
+    width: max-content;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s;
+
+    &:hover {
+      color: @purple;
+    }
+  }
+}

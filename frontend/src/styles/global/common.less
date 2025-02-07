@@ -1,0 +1,61 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  background-color: @bg-light-purple;
+}
+body {
+  padding-top: 127px;
+  overflow-x: hidden;
+}
+html {
+  height: -webkit-fill-available; /* We have to fix html height */
+  font-family: "Inter";
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+a {
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+input,
+textarea,
+select {
+  box-shadow: none; // убрать тень
+  outline: none; // убрать внешний контур, который подсвечивает текущий элемент в фокусе
+}
+textarea {
+  resize: none; // запретить пользователю изменять размер
+}
+input,
+textarea {
+  &::placeholder {
+    color: #6c6c6c;
+  }
+}
+input:focus,
+textarea:focus {
+  &::placeholder {
+    color: transparent;
+  }
+}
+button {
+  cursor: pointer;
+}

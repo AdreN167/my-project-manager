@@ -1,0 +1,74 @@
+.project-card {
+  transition: 0.3s;
+  &:hover {
+    scale: 1.01;
+  }
+  &--active {
+    scale: 1.01;
+  }
+  &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 100%;
+    min-height: 130px;
+    max-height: 130px;
+    width: 100%;
+    background-color: @white;
+    border-radius: 25px;
+    filter: drop-shadow(fade(black, 30%) 0px 4px 4px);
+
+    &--opened {
+      filter: drop-shadow(fade(black, 30%) 0px 0px 0px);
+      box-shadow: inset 4px 4px 20px fade(black, 30%);
+    }
+  }
+
+  &__color-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    border-radius: 25px;
+  }
+
+  &__title {
+    margin-left: 55px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  &__open-btn {
+    justify-self: flex-end;
+    margin-left: 55px;
+  }
+
+  &__settings {
+    margin-left: auto;
+    color: #9b9b9b;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: #8860d0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__delete-btn {
+    display: block;
+    margin-left: 33px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: @black;
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  &__progress-bar {
+    margin-left: 25px;
+  }
+}

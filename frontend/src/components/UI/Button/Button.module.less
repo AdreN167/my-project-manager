@@ -1,0 +1,163 @@
+.button {
+  display: block;
+
+  &__add,
+  &__submit,
+  &__open,
+  &__close {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  &__add {
+    position: relative;
+    padding: 0;
+    padding-left: 110px;
+    font-size: 20px;
+    color: @gray;
+    border: none;
+    background: transparent;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 93px;
+      height: 15px;
+      background-color: @blue;
+      transition: 0.2s;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        background-color: @purple;
+      }
+    }
+  }
+
+  &__add--small {
+    position: relative;
+    padding: 0;
+    padding-left: 62px;
+    font-size: 16px;
+    color: @gray;
+    border: none;
+    background: transparent;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 53px;
+      height: 9px;
+      background-color: @blue;
+      transition: 0.2s;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        background-color: @purple;
+      }
+    }
+  }
+
+  &__open {
+    position: relative;
+    width: 94px;
+    height: 50px;
+
+    &--active {
+      &::after {
+        transform: rotate(55deg);
+      }
+      &::before {
+        transform: rotate(-55deg);
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 63px;
+      width: 5px;
+      height: 47px;
+      background-color: @black;
+      transform: rotate(55deg);
+      transition: 0.2s;
+    }
+
+    &::after {
+      left: 28px;
+      transform: rotate(-55deg);
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        background-color: @purple;
+      }
+    }
+  }
+
+  &__submit {
+    max-width: 400px;
+    width: 100%;
+    height: 55px;
+    color: @white;
+    font-size: 20px;
+    background-color: @blue;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: @purple;
+    }
+  }
+
+  &__close {
+    box-sizing: border-box;
+    width: 59px;
+    height: 59px;
+    background-color: @dark-purple;
+    border-radius: 50%;
+    transition: 0.2s;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 28px;
+      width: 4px;
+      height: 30px;
+      background-color: @white;
+      transform: rotate(45deg);
+      transition: 0.2s;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background-color: @dark-red;
+    }
+  }
+}
